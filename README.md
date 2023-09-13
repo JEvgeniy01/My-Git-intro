@@ -184,6 +184,7 @@ git log --oneline
 - staged (отслеживаемый/indexed/cached/помещенный в staged area - после git add)
 - tracked (отслеживаемые файлы - после git add и git commit)
 - modified (измененные файлы на любой стадии после начала отслеживания)
+  **Схема изменения статуса файлов в Git**
 
 ```mermaid
 graph LR;
@@ -191,4 +192,5 @@ graph LR;
   staged -- "git commit" --> tracked
   tracked -- "make changes" --> modified
   staged -- "make changes" --> modified
+  modified -- "gid add" --> staged
 ```
